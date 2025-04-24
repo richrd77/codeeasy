@@ -1,0 +1,124 @@
+// *{
+//     box-sizing: border-box;
+// }
+
+.wrapper {
+    width: 100vw;
+
+    .menu-bar-container {
+        position: sticky;
+        width: 100vw;
+        top: 0;
+        background-color: #151515;
+
+        .menu-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            color: white;
+
+            .logo {
+                margin-right: auto;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                list-style: none;
+                gap: 20px;
+                color: #757575;
+
+                li {
+                    transition: all 0.5s ease-in-out;
+                    &:hover {
+                        cursor: pointer;
+                        color: white;
+                    }
+                }
+
+            }
+
+            .menu-icon {
+                display: none;
+                align-items: center;
+                justify-content: center;
+                margin: 0 20px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .side-bar-container {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: -300px;
+        background-color: #252525;
+        padding: 30px 0;
+        transition: right 0.5s ease-in-out;
+
+        .side-bar {
+            display: flex;
+
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 0 20px;
+            color: white;
+
+            .logo {
+                margin-right: auto;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                list-style: none;
+                gap: 40px;
+
+                li {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .menu-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 20px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:960px) {
+    .wrapper {
+        .menu-bar-container {
+            .menu-bar {
+
+                ul {
+                    display: none;
+                }
+
+                .menu-icon {
+                    display: flex;
+                }
+
+            }
+        }
+    }
+}

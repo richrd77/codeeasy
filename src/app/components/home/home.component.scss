@@ -1,0 +1,127 @@
+* {
+    color: white;
+}
+
+.wrapper {
+    .hero-section {
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            padding: 50px 100px 0 100px;
+            text-align: center;
+
+            h1 {
+                font-size: 200%;
+            }
+
+            button {
+                background: linear-gradient(to right, #FF6666, #ff0000);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                font-size: 100%;
+                padding: 20px 40px;
+                border-radius: 30px;
+                border: none;
+
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0 0 10px 1px #3f3f3f;
+                    border: none;
+                }
+            }
+        }
+    }
+
+
+    .we-and-aim {
+        margin-top: 100px;
+        text-align: center;
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+
+            .who-are-we {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                max-width: 500px;
+
+                .image {
+                    width: 300px;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                h1 {
+                    font-size: 200%;
+                    color: #ff9100;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 150%;
+                }
+            }
+
+            .our-vision {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                max-width: 500px;
+
+                .image {
+                    width: 300px;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                h1 {
+                    font-size: 200%;
+                    color: #ff9100;
+                }
+
+                p {
+                    font-size: 150%;
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button {
+                background: linear-gradient(to right, #FF6666, #ff0000);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                font-size: 150%;
+                padding: 20px 40px;
+                border-radius: 30px;
+                border: none;
+
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0 0 10px 1px #3f3f3f;
+                    border: none;
+                }
+            }
+        }
+    }
+}
