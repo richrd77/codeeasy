@@ -1,9 +1,10 @@
 <div class="wrapper">
-    <div class="hero-section">
-        <section>
-            <h1>Welcome to CODEEASY</h1>
+    <section class="hero-section">
+        <section class="content-section">
+            <h2>Welcome to</h2>
+            <h1>CODEEASY</h1>
             <h3>Your Premier Institute for STEM Education in Tumkur</h3>
-            <h5>Master the most in-demand techincal skills with oyr professional certificate programs. Learn from
+            <h5>Master the most in-demand techincal skills with our professional certificate programs. Learn from
                 industry experts and accelerate your career growth.</h5>
             <div>
                 <button>
@@ -15,28 +16,32 @@
                 </button>
             </div>
         </section>
+        <section class="company-image-section">
+            <div class="image-container">
+                <img src="images/company-image.jpg" alt="" srcset="">
+            </div>
+        </section>
+    </section>
 
-    </div>
 
-
-    <div class="we-and-aim">
+    <section class="we-and-aim">
         <div class="container">
-            <div class="who-are-we">
+            <section class="who-are-we">
                 <div class="image">
                     <img src="images/who-are-we.png" alt="">
                 </div>
                 <h1>Who We Are ?</h1>
                 <p>As Tumkur's premier institute, our mission is to nurture talent by providing interactive
                     STEM classes and comprehensive IT training programs.</p>
-            </div>
-            <div class="our-vision">
+            </section>
+            <section class="our-vision">
                 <div class="image">
                     <img src="images/our-vision.png" alt="">
                 </div>
                 <h1>Our Vision</h1>
                 <p>To equip our students with the skills needed for success in the digital age and tech industries.
                 </p>
-            </div>
+            </section>
         </div>
         <div class="button">
             <button>
@@ -47,5 +52,30 @@
                 </svg>
             </button>
         </div>
-    </div>
+    </section>
+    <section class="our-courses-section">
+
+        <h2>Our Courses</h2>
+        <section class="courses">
+
+            <div class="course" *ngFor="let course of courses">
+                <div class="title-container">
+                    <span>{{course.title}}</span>
+                </div>
+                <div class="image-container">
+                    <img src="{{course.imgSrc}}" alt="">
+                </div>
+                <p>{{course.description}}</p>
+                <p>Fee: {{course.fee}}</p>
+                <p>Duration: {{course.duration}}</p>
+                <p>Mode: {{course.mode}}</p>
+                <p>Level: {{course.level}}</p>
+                <p>Start Date: {{course.startDate}}</p>
+                <p>Instructor Name: {{course.instructorName}}</p>
+                <div class="btn-container">
+                    <button>Join Now!</button>
+                </div>
+            </div>
+        </section>
+    </section>
 </div>

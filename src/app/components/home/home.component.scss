@@ -1,20 +1,59 @@
+$h1-font-size: clamp(2rem, 5vw, 4rem); // Big but not extreme
+$h2-font-size: clamp(1.5rem, 4vw, 3rem);
+$h3-font-size: clamp(1.25rem, 3vw, 2.5rem);
+$h4-font-size: clamp(1rem, 2.5vw, 2rem);
+$h5-font-size: clamp(0.875rem, 2vw, 1.5rem);
+$p-font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+$btn-font-size: clamp(1rem, 2vw, 1.5rem);
+$btn-gradient: linear-gradient(to right, #FF6666, #ff0000);
+
 * {
     color: white;
+    // border: 2px solid white;
+
 }
 
 .wrapper {
     .hero-section {
-        section {
+        display: flex;
+
+        // justify-content: space-evenly;
+        flex-wrap: wrap;
+
+
+        .content-section {
+            margin-top: 1em;
+            margin-right: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 30px;
-            padding: 50px 100px 0 100px;
+            padding: min(0.5em, 2%) min(2em, 8%);
             text-align: center;
+            flex-wrap: wrap;
+            width: 60%;
+            transition: width 0.3s ease-in-out;
 
             h1 {
-                font-size: 200%;
+                margin: 0;
+                padding: 0;
+                font-size: $h1-font-size;
+                letter-spacing: clamp(0.1rem, 1vw, 2rem);
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: $h4-font-size;
+            }
+
+            h3 {
+                margin: 0.5em;
+                font-size: $h4-font-size;
+            }
+
+            h5 {
+                font-size: $h5-font-size;
             }
 
             button {
@@ -23,8 +62,9 @@
                 align-items: center;
                 justify-content: center;
                 gap: 10px;
-                font-size: 100%;
-                padding: 20px 40px;
+                font-size: $btn-font-size;
+                ;
+                padding: min(1em, 5%) min(8em, 6vw);
                 border-radius: 30px;
                 border: none;
 
@@ -35,27 +75,43 @@
                 }
             }
         }
+
+        .company-image-section {
+            display: flex;
+            align-items: center;
+            width: 30%;
+
+            .image-container {
+
+                img {
+                    max-width: 100%;
+                    border-top-left-radius: 50%;
+                    border-bottom-left-radius: 50%;
+                }
+            }
+        }
     }
 
 
     .we-and-aim {
-        margin-top: 100px;
+        margin-top: min(10em, 10%);
         text-align: center;
 
         .container {
             display: flex;
             justify-content: space-around;
+            margin-bottom: 1em;
 
             .who-are-we {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
-                padding: 20px;
-                max-width: 500px;
+                padding: min(0.5em, 2%);
+                max-width: 30vw;
 
                 .image {
-                    width: 300px;
+                    width: 60%;
 
                     img {
                         max-width: 100%;
@@ -63,26 +119,27 @@
                 }
 
                 h1 {
-                    font-size: 200%;
+                    font-size: $h3-font-size;
                     color: #ff9100;
                 }
 
                 p {
                     margin: 0;
-                    font-size: 150%;
+                    font-size: $p-font-size;
+
                 }
             }
 
             .our-vision {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
-                padding: 20px;
-                max-width: 500px;
+                padding: min(0.5em, 2%);
+                max-width: 30vw;
 
                 .image {
-                    width: 300px;
+                    width: 60%;
 
                     img {
                         max-width: 100%;
@@ -90,12 +147,14 @@
                 }
 
                 h1 {
-                    font-size: 200%;
+                    font-size: $h3-font-size;
                     color: #ff9100;
                 }
 
                 p {
-                    font-size: 150%;
+                    margin: 0;
+                    font-size: $p-font-size;
+
                 }
             }
         }
@@ -111,8 +170,8 @@
                 align-items: center;
                 justify-content: center;
                 gap: 10px;
-                font-size: 150%;
-                padding: 20px 40px;
+                font-size: $btn-font-size;
+                padding: min(0.6em, 5%) min(8em, 6vw);
                 border-radius: 30px;
                 border: none;
 
@@ -124,4 +183,116 @@
             }
         }
     }
+
+    .our-courses-section {
+        text-align: center;
+        margin-top: 5em;
+
+        h2 {
+            font-size: $h2-font-size;
+            margin: 0;
+        }
+
+        .courses {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            padding: min(3em, 10%);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: min(1em, 5%);
+
+
+            .course {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-start;
+                padding: 1em;
+                box-shadow: 0 0 5px 2px rgb(170, 170, 170);
+                border-radius: 15px;
+                height: 100%;
+
+                .title-container {
+                    width: 100%;
+                    border-top-right-radius: 15px;
+                    border-top-left-radius: 15px;
+                    display: flex;
+                    justify-content: center;
+                    background: #191919;
+
+
+
+
+
+
+                    span {
+                        align-self: center;
+                        font-size: $h4-font-size;
+                        text-align: center;
+                        font-weight: 1000;
+                        padding: 1em 0;
+                    }
+                }
+
+
+                p {
+                    font-size: $p-font-size;
+                    text-align: center;
+                    margin: 0.4em 0;
+                }
+
+                .image-container {
+                    width: 100px;
+                    align-self: center;
+                    margin: 1em;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .btn-container {
+                    display: flex;
+                    justify-self: flex-end;                ;
+                    
+                    button {
+                        background: linear-gradient(to right, #FF6666, #ff0000);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        font-size: $btn-font-size;
+                        padding: min(0.6em, 5%) min(8em, 6vw);
+                        border-radius: 30px;
+                        border: none;
+
+                        &:hover {
+                            cursor: pointer;
+                            box-shadow: 0 0 10px 1px #3f3f3f;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:1271px) {
+    .wrapper {
+        .hero-section {
+            .content-section {
+                width: 100%;
+            }
+
+            .company-image-section {
+                display: none;
+            }
+        }
+    }
+
+
+
+
 }
