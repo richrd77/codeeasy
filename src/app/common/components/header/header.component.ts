@@ -14,7 +14,6 @@ export class HeaderComponent {
     setTimeout(() => {
       sideBar.style.right = '0';
     }, 250);
-      // sideBar.hidden = false;
 
   }
 
@@ -25,8 +24,6 @@ export class HeaderComponent {
     setTimeout(() => {
       sideBar.style.display = 'none';
     }, 500);
-
-    // sideBar.hidden = true;
 
 
   }
