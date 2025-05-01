@@ -54,28 +54,30 @@
         </div>
     </section>
     <section class="our-courses-section">
-
         <h2>Our Courses</h2>
-        <section class="courses">
-
-            <div class="course" *ngFor="let course of courses">
-                <div class="title-container">
-                    <span>{{course.title}}</span>
+        <section class="our-courses-list" *ngFor="let category of courseCategory">
+            <h3>{{category.type}}</h3>
+            <section class="courses">
+                <div class="course" *ngFor="let course of category.courses">
+                    <div class="title-container">
+                        <span>{{course.title}}</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="{{course.imgSrc}}" alt="">
+                    </div>
+                    <p>{{course.description}}</p>
+                    <p>Fee: {{course.fee}}</p>
+                    <p>Duration: {{course.duration}}</p>
+                    <p>Mode: {{course.mode}}</p>
+                    <p>Level: {{course.level}}</p>
+                    <p>Start Date: {{course.startDate}}</p>
+                    <p>Instructor Name: {{course.instructorName}}</p>
+                    <div class="btn-container">
+                        <button>Join Now!</button>
+                    </div>
                 </div>
-                <div class="image-container">
-                    <img src="{{course.imgSrc}}" alt="">
-                </div>
-                <p>{{course.description}}</p>
-                <p>Fee: {{course.fee}}</p>
-                <p>Duration: {{course.duration}}</p>
-                <p>Mode: {{course.mode}}</p>
-                <p>Level: {{course.level}}</p>
-                <p>Start Date: {{course.startDate}}</p>
-                <p>Instructor Name: {{course.instructorName}}</p>
-                <div class="btn-container">
-                    <button>Join Now!</button>
-                </div>
-            </div>
+            </section>
         </section>
+
     </section>
 </div>
