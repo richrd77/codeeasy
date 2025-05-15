@@ -2,17 +2,21 @@
     background-color: #151515;
 
     .menu-bar-container {
-        // width: 100vw;
 
+        // z-index: 999;
         .menu-bar {
-            position: sticky;
+            // position: sticky;
             display: flex;
-            top: 0;
+            // top: 0;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             padding: 0 20px;
             color: white;
+            position: sticky;
+            top: 0;
+            background-color: #151515;
+            z-index: 1000;
 
             .logo {
                 margin-right: auto;
@@ -29,7 +33,7 @@
 
                 li {
                     a {
-                        color: #757575;
+                        color: #aeaeae;
                         transition: all 0.5s ease-in-out;
                         text-decoration: none;
 
@@ -44,7 +48,6 @@
 
             .menu-icon {
                 display: none;
-
                 align-items: center;
                 justify-content: center;
                 margin: 0 20px;

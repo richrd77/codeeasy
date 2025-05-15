@@ -7,6 +7,8 @@ import { HeaderComponent } from './common/components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { CommonModule, NgFor } from '@angular/common';
+import { CoursesAndProgramsComponent } from './components/courses-and-programs/courses-and-programs.component';
 
 
 @NgModule({
@@ -15,13 +17,16 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    CoursesAndProgramsComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterOutlet
+    RouterOutlet,
+    CommonModule,
+    NgFor
   ],
   providers: [],
   bootstrap: [AppComponent]

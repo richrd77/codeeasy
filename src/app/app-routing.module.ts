@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { CoursesAndProgramsComponent } from './components/courses-and-programs/courses-and-programs.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,7 +12,7 @@ const routes: Routes = [
   { path: 'courses-and-programs', component: CoursesAndProgramsComponent },
   { path: 'success-stories', component: HomeComponent },
   { path: 'latest-news-and-resources', component: HomeComponent },
-  { path: 'contact-us', component: HomeComponent },
+  { path: 'contact-us', component: ContactUsComponent },
 ];
 
 @NgModule({
