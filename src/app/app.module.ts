@@ -8,13 +8,14 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { AboutUsComponent } from './components/home/about-us/about-us.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    AboutUsComponent,
+
   ],
   imports: [
     BrowserModule,

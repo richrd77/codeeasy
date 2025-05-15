@@ -1,4 +1,4 @@
-<div class="wrapper">
+<!-- <div class="wrapper">
     <section class="hero-section">
         <section class="content-section">
             <h2>Welcome to</h2>
@@ -80,4 +80,188 @@
         </section>
 
     </section>
+</div> -->
+<div class="wrapper">
+    <!-- Existing hero section remains the same -->
+    <section class="hero-section">
+        <section class="content-section">
+            <h2>Welcome to</h2>
+            <h1>CODEEASY</h1>
+            <h3>Your Premier Institute for STEM Education in Tumkur</h3>
+            <h5>Master the most in-demand techincal skills with our professional certificate programs. Learn from
+                industry experts and accelerate your career growth.</h5>
+            <div>
+                <button>
+                    <span>Explore Courses</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#FFFFFF">
+                        <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <section class="company-image-section">
+            <div class="image-container">
+                <img src="images/company-image.jpg" alt="" srcset="">
+            </div>
+        </section>
+    </section>
+
+    <!-- Enhanced we-and-aim section -->
+    <section class="we-and-aim">
+        <div class="container">
+            <section class="who-are-we">
+                <div class="image">
+                    <img src="images/who-are-we.png" alt="">
+                </div>
+                <h1>Who We Are ?</h1>
+                <p>As Tumkur's premier institute, our mission is to nurture talent by providing interactive
+                    STEM classes and comprehensive IT training programs.</p>
+                <p class="additional-info">Founded in 2020, we've trained over 2000 students with a 95% satisfaction rate. Our faculty consists of industry professionals with 5+ years of experience.</p>
+            </section>
+            <section class="our-vision">
+                <div class="image">
+                    <img src="images/our-vision.png" alt="">
+                </div>
+                <h1>Our Vision</h1>
+                <p>To equip our students with the skills needed for success in the digital age and tech industries.</p>
+                <p class="additional-info">We aim to bridge the gap between academia and industry by providing practical, hands-on training that prepares students for real-world challenges.</p>
+            </section>
+        </div>
+        <div class="button">
+            <button>
+                <span>Learn More About Us</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#FFFFFF">
+                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>Why Choose CODEEASY?</h2>
+        <div class="features-container">
+            <div class="feature">
+                <div class="icon">
+                    <img src="images/industry-experts.png" alt="Industry Experts">
+                </div>
+                <h3>Industry Experts</h3>
+                <p>Learn from professionals with real-world experience</p>
+            </div>
+            <div class="feature">
+                <div class="icon">
+                    <img src="images/hands-on.png" alt="Hands-on Training">
+                </div>
+                <h3>Hands-on Training</h3>
+                <p>Practical projects and assignments</p>
+            </div>
+            <div class="feature">
+                <div class="icon">
+                    <img src="images/certification.png" alt="Certification">
+                </div>
+                <h3>Certification</h3>
+                <p>Recognized certificates upon completion</p>
+            </div>
+            <div class="feature">
+                <div class="icon">
+                    <img src="images/career-support.png" alt="Career Support">
+                </div>
+                <h3>Career Support</h3>
+                <p>Resume building and interview preparation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Our Courses Section -->
+    <section class="our-courses-section">
+        <h2>Our Courses</h2>
+        <p class="courses-intro">We offer comprehensive courses designed to take you from beginner to job-ready. All our courses include practical projects, assignments, and mentorship.</p>
+        
+        <section class="our-courses-list" *ngFor="let category of courseCategory">
+            <h3>{{category.type}}</h3>
+            <section class="courses">
+                <div class="course" *ngFor="let course of category.courses">
+                    <div class="title-container">
+                        <span>{{course.title}}</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="{{course.imgSrc}}" alt="">
+                    </div>
+                    <p>{{course.description}}</p>
+                    <div class="course-details">
+                        <p><strong>Fee:</strong> {{course.fee}}</p>
+                        <p><strong>Duration:</strong> {{course.duration}}</p>
+                        <p><strong>Mode:</strong> {{course.mode}}</p>
+                        <p><strong>Level:</strong> {{course.level}}</p>
+                        <p><strong>Start Date:</strong> {{course.startDate}}</p>
+                        <p><strong>Instructor:</strong> {{course.instructorName}}</p>
+                    </div>
+                    <div class="btn-container">
+                        <button>Join Now!</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="student-image">
+                    <img src="images/student1.jpg" alt="Student">
+                </div>
+                <p class="quote">"CODEEASY transformed my career. The Python course gave me the skills to land my first job as a developer."</p>
+                <p class="student-name">- Ramesh K.</p>
+            </div>
+            <div class="testimonial">
+                <div class="student-image">
+                    <img src="images/student2.jpg" alt="Student">
+                </div>
+                <p class="quote">"The hands-on approach and industry-relevant curriculum made all the difference in my learning journey."</p>
+                <p class="student-name">- Priya M.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About CODEEASY</h3>
+                <p>Premier STEM education institute in Tumkur providing quality technical education since 2020.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><img src="images/location.png" alt=""> 123 STEM Street, Tumkur, Karnataka</p>
+                <p><img src="images/phone.png" alt=""> +91 9876543210</p>
+                <p><img src="images/email.png" alt=""> info&#64;codeeasy.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 CODEEASY. All Rights Reserved.</p>
+        </div>
+    </footer>
 </div>

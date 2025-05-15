@@ -1,0 +1,92 @@
+<div class="courses-container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Unlock Your Coding Potential with Industry-Ready Courses</h1>
+      <p class="subtitle">At CodeEasy, we offer expertly crafted courses and hands-on programs tailored to meet the demands of today's tech-driven world.</p>
+    </section>
+  
+    <!-- Courses Section -->
+    <section class="section">
+      <h2>🎓 Our Courses</h2>
+      
+      <div class="level-section">
+        <h3>🧱 Beginner Level</h3>
+        <div class="courses-grid">
+          <div class="course-card" *ngFor="let course of courses">
+            <div class="course-header">
+              <h4>{{ course.title }}</h4>
+              <span class="level-badge beginner">{{ course.level }}</span>
+            </div>
+            <div class="course-body">
+              <p><strong>Duration:</strong> {{ course.duration }}</p>
+              <div *ngIf="course.languages">
+                <strong>Languages:</strong> {{ course.languages.join(', ') }}
+              </div>
+              <div *ngIf="course.technologies">
+                <strong>Technologies:</strong> {{ course.technologies.join(', ') }}
+              </div>
+              <div class="key-topics">
+                <strong>Key Topics:</strong>
+                <ul>
+                  <li *ngFor="let topic of course.keyTopics">{{ topic }}</li>
+                </ul>
+              </div>
+              <p><strong>Ideal For:</strong> {{ course.idealFor }}</p>
+            </div>
+            <button class="enroll-btn">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="level-section">
+        <h3>⚙️ Intermediate Level</h3>
+        <div class="courses-grid">
+          <div class="course-card" *ngFor="let course of courses">
+            <!-- Same card structure as above -->
+          </div>
+        </div>
+      </div>
+  
+      <div class="level-section">
+        <h3>🚀 Advanced Level</h3>
+        <div class="courses-grid">
+          <div class="course-card" *ngFor="let course of courses">
+            <!-- Same card structure as above -->
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Programs Section -->
+    <section class="section">
+      <h2>💼 Special Programs</h2>
+      <div class="programs-grid">
+        <div class="program-card" *ngFor="let program of programs">
+          <h3>{{ program.title }}</h3>
+          <ul>
+            <li *ngFor="let feature of program.features">{{ feature }}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Benefits Section -->
+    <section class="section benefits">
+      <h2>📜 Certifications & Outcomes</h2>
+      <p>All our programs come with:</p>
+      <ul>
+        <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+      </ul>
+    </section>
+  
+    <!-- CTA Section -->
+    <section class="cta">
+      <h2>📅 Enroll Now</h2>
+      <p>Explore your ideal course and join the league of successful coders with CodeEasy.</p>
+      <div class="cta-buttons">
+        <button class="btn primary">View Upcoming Batches</button>
+        <button class="btn secondary">Request a Free Demo</button>
+        <button class="btn tertiary">Download Brochure</button>
+      </div>
+    </section>
+  </div>
