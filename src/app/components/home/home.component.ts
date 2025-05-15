@@ -104,14 +104,50 @@ export class HomeComponent {
             type: "Programming Courses",
             courses:this.courses
         },
-        {
-            type: "Other Courses",
-            courses:this.courses
-        }
-        ,
-        {
-            type: "Other Courses",
-            courses:this.courses
-        }
-    ]
+
+ 
+    {
+        type: "Web Development",
+        courses: [
+            {
+                title: "Full Stack Development",
+                description: "Learn front-end and back-end development with HTML, CSS, JavaScript, Node.js and MongoDB.",
+                fee: "₹1999",
+                duration: "12 weeks",
+                mode: "Hybrid",
+                level: "Intermediate",
+                startDate: "June 15, 2025",
+                instructorName: "Ms. Deepa Patel",
+                imgSrc: "images/course-logos/fullstack-logo.png"
+            },
+            {
+                title: "React JS",
+                description: "Build modern web applications with React, Redux and React Router.",
+                fee: "₹1299",
+                duration: "6 weeks",
+                mode: "Online",
+                level: "Intermediate",
+                startDate: "July 1, 2025",
+                instructorName: "Mr. Vikram Singh",
+                imgSrc: "images/course-logos/react-logo.png"
+            }
+        ]
+    },
+    {
+        type: "Data Science",
+        courses: [
+            {
+                title: "Python for Data Science",
+                description: "Learn data analysis, visualization and machine learning with Python.",
+                fee: "₹1599",
+                duration: "8 weeks",
+                mode: "Hybrid",
+                level: "Intermediate",
+                startDate: "June 10, 2025",
+                instructorName: "Dr. Suresh Kumar",
+                imgSrc: "images/course-logos/datascience-logo.png"
+            }
+        ]
+    }
+];
 }
