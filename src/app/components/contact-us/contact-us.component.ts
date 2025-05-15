@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'ce-contact-us',
+  selector: 'ce-contact-us', 
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss'
 })
