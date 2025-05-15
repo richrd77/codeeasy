@@ -7,147 +7,207 @@ import { Course } from '../../common/modules/course';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
-    courses: Course[] = [
-        {
-            title: "C Programming",
-            description: "Master the fundamentals of C programming and build a strong programming base with real-world examples.",
-            fee: "₹499",
-            duration: "4 weeks",
-            mode: "Online",
-            level: "Beginner",
-            startDate: "May 20, 2025",
-            instructorName: "Prof. A Kumar",
-            imgSrc: "images/course-logos/c-logo.png"
-        },
-        {
-            title: "C++ Programming",
-            description: "Deep dive into Object-Oriented Programming, STL, and advanced C++ techniques for high-performance applications.",
-            fee: "₹699",
-            duration: "5 weeks",
-            mode: "Online",
-            level: "Intermediate",
-            startDate: "June 1, 2025",
-            instructorName: "Dr. Nisha Verma",
-            imgSrc: "images/course-logos/c++-logo.png"
-        },
-        {
-            title: "Java Programming",
-            description: "Learn Java from scratch, build applications, and understand the foundations of Android development.",
-            fee: "₹899",
-            duration: "8 weeks",
-            mode: "Hybrid",
-            level: "Beginner",
-            startDate: "May 25, 2025",
-            instructorName: "Mr. Rahul Mehta",
-            imgSrc: "images/course-logos/java-logo.png"
-        },
-        {
-            title: "Python Programming",
-            description: "An easy introduction to Python programming, data analysis, and basic machine learning concepts.",
-            fee: "₹599",
-            duration: "6 weeks",
-            mode: "Online",
-            level: "Beginner",
-            startDate: "June 10, 2025",
-            instructorName: "Ms. Priya Sharma",
-            imgSrc: "images/course-logos/python-logo.png"
-        },
-        {
-            title: "C Programming",
-            description: "Master the fundamentals of C programming and build a strong programming base with real-world examples.",
-            fee: "₹499",
-            duration: "4 weeks",
-            mode: "Online",
-            level: "Beginner",
-            startDate: "May 20, 2025",
-            instructorName: "Prof. A Kumar",
-            imgSrc: "images/course-logos/c-logo.png"
-        },
-        {
-            title: "C++ Programming",
-            description: "Deep dive into Object-Oriented Programming, STL, and advanced C++ techniques for high-performance applications.",
-            fee: "₹699",
-            duration: "5 weeks",
-            mode: "Online",
-            level: "Intermediate",
-            startDate: "June 1, 2025",
-            instructorName: "Dr. Nisha Verma",
-            imgSrc: "images/course-logos/c++-logo.png"
-        },
-        {
-            title: "Java Programming",
-            description: "Learn Java from scratch, build applications, and understand the foundations of Android development.",
-            fee: "₹899",
-            duration: "8 weeks",
-            mode: "Hybrid",
-            level: "Beginner",
-            startDate: "May 25, 2025",
-            instructorName: "Mr. Rahul Mehta",
-            imgSrc: "images/course-logos/java-logo.png"
-        },
-        {
-            title: "Python Programming",
-            description: "An easy introduction to Python programming, data analysis, and basic machine learning concepts.",
-            fee: "₹599",
-            duration: "6 weeks",
-            mode: "Online",
-            level: "Beginner",
-            startDate: "June 10, 2025",
-            instructorName: "Ms. Priya Sharma",
-            imgSrc: "images/course-logos/python-logo.png"
-        }
-    ];
-
-    courseCategory: any[]=[
-        {
-            type: "Programming Courses",
-            courses:this.courses
-        },
-
- 
+  courseCategories = [
     {
-        type: "Web Development",
-        courses: [
-            {
-                title: "Full Stack Development",
-                description: "Learn front-end and back-end development with HTML, CSS, JavaScript, Node.js and MongoDB.",
-                fee: "₹1999",
-                duration: "12 weeks",
-                mode: "Hybrid",
-                level: "Intermediate",
-                startDate: "June 15, 2025",
-                instructorName: "Ms. Deepa Patel",
-                imgSrc: "images/course-logos/fullstack-logo.png"
-            },
-            {
-                title: "React JS",
-                description: "Build modern web applications with React, Redux and React Router.",
-                fee: "₹1299",
-                duration: "6 weeks",
-                mode: "Online",
-                level: "Intermediate",
-                startDate: "July 1, 2025",
-                instructorName: "Mr. Vikram Singh",
-                imgSrc: "images/course-logos/react-logo.png"
-            }
-        ]
+      type: 'School Tuition (1st-8th)',
+      courses: [
+        {
+          title: 'Karnataka State Syllabus',
+          description: 'Comprehensive tuition for state syllabus students',
+          level: 'All Subjects',
+          duration: 'Monthly',
+          startDate: 'Ongoing',
+          fee: '₹1200/month',
+          imgSrc: 'assets/images/school-state.jpg'
+        },
+        {
+          title: 'CBSE Syllabus',
+          description: 'Complete CBSE curriculum coverage',
+          level: 'All Subjects',
+          duration: 'Monthly',
+          startDate: 'Ongoing',
+          fee: '₹1500/month',
+          imgSrc: 'assets/images/school-cbse.jpg'
+        },
+        {
+          title: 'ICSE Syllabus',
+          description: 'Thorough ICSE syllabus instruction',
+          level: 'All Subjects',
+          duration: 'Monthly',
+          startDate: 'Ongoing',
+          fee: '₹1500/month',
+          imgSrc: 'assets/images/school-icse.jpg'
+        }
+      ]
     },
     {
-        type: "Data Science",
-        courses: [
-            {
-                title: "Python for Data Science",
-                description: "Learn data analysis, visualization and machine learning with Python.",
-                fee: "₹1599",
-                duration: "8 weeks",
-                mode: "Hybrid",
-                level: "Intermediate",
-                startDate: "June 10, 2025",
-                instructorName: "Dr. Suresh Kumar",
-                imgSrc: "images/course-logos/datascience-logo.png"
-            }
-        ]
+      type: '9th & 10th Standard',
+      courses: [
+        {
+          title: 'State Board - Math & Science',
+          description: 'Focused coaching for core subjects',
+          level: '9th-10th',
+          duration: 'Yearly',
+          startDate: 'June 2023',
+          fee: '₹10,000/year',
+          imgSrc: 'assets/images/math-science.jpg'
+        },
+        {
+          title: 'State Board - All Subjects',
+          description: 'Complete subject coverage',
+          level: '9th-10th',
+          duration: 'Yearly',
+          startDate: 'June 2023',
+          fee: '₹15,000/year',
+          imgSrc: 'assets/images/all-subjects.jpg'
+        },
+        {
+          title: 'CBSE/ICSE - Math & Science',
+          description: 'Specialized coaching for CBSE/ICSE students',
+          level: '9th-10th',
+          duration: 'Yearly',
+          startDate: 'June 2023',
+          fee: '₹12,000/year',
+          imgSrc: 'assets/images/cbse-math.jpg'
+        },
+        {
+          title: 'CBSE/ICSE - All Subjects',
+          description: 'Full curriculum for CBSE/ICSE boards',
+          level: '9th-10th',
+          duration: 'Yearly',
+          startDate: 'June 2023',
+          fee: '₹16,000/year',
+          imgSrc: 'assets/images/cbse-all.jpg'
+        }
+      ]
+    },
+    {
+      type: 'Coding & Computer Courses',
+      courses: [
+        {
+          title: 'C Programming',
+          description: 'Master the fundamentals of C language',
+          level: 'Beginner',
+          duration: '2 Months',
+          startDate: 'Monthly Batches',
+          fee: '₹6000',
+          imgSrc: 'assets/images/c-programming.jpg'
+        },
+        {
+          title: 'Python Programming',
+          description: 'Learn versatile Python programming',
+          level: 'Beginner',
+          duration: '2 Months',
+          startDate: 'Monthly Batches',
+          fee: '₹6000',
+          imgSrc: 'assets/images/python.jpg'
+        },
+        {
+          title: 'Java Programming',
+          description: 'Object-oriented Java development',
+          level: 'Intermediate',
+          duration: '2 Months',
+          startDate: 'Monthly Batches',
+          fee: '₹8000',
+          imgSrc: 'assets/images/java.jpg'
+        },
+        {
+          title: 'Scratch Programming',
+          description: 'Fun introduction to coding for kids',
+          level: 'Beginner',
+          duration: '2 Months',
+          startDate: 'Monthly Batches',
+          fee: '₹6000',
+          imgSrc: 'assets/images/scratch.jpg'
+        },
+        {
+          title: 'Tally',
+          description: 'Accounting and inventory management',
+          level: 'Beginner',
+          duration: '2 Months',
+          startDate: 'Monthly Batches',
+          fee: '₹5000',
+          imgSrc: 'assets/images/tally.jpg'
+        },
+        {
+          title: 'Basic Computer Skills',
+          description: 'Essential computer literacy course',
+          level: 'Beginner',
+          duration: '2 Months',
+          startDate: 'Monthly Batches',
+          fee: '₹6000',
+          imgSrc: 'assets/images/computer-basics.jpg'
+        }
+      ]
+    },
+    {
+      type: 'PUC Coaching',
+      courses: [
+        {
+          title: 'Computer Science',
+          description: 'Comprehensive PUC Computer Science',
+          level: '1st & 2nd PUC',
+          duration: 'Termwise',
+          startDate: 'June/Dec Batches',
+          fee: '₹6000',
+          imgSrc: 'assets/images/puc-cs.jpg'
+        },
+        {
+          title: 'Commerce Subjects',
+          description: 'Accounts, Business, Economics, Statistics',
+          level: '1st & 2nd PUC',
+          duration: 'Termwise',
+          startDate: 'June/Dec Batches',
+          fee: '₹20,000',
+          imgSrc: 'assets/images/commerce.jpg'
+        },
+        {
+          title: 'Income Tax & GST',
+          description: 'Practical taxation knowledge',
+          level: '1st & 2nd PUC',
+          duration: 'Termwise',
+          startDate: 'June/Dec Batches',
+          fee: '₹6000',
+          imgSrc: 'assets/images/taxation.jpg'
+        }
+      ]
+    },
+    {
+      type: 'Entrance Exam Coaching',
+      courses: [
+        {
+          title: 'PGCET - MCA Entrance',
+          description: 'Complete MCA entrance preparation',
+          level: 'Entrance',
+          duration: '1 Year',
+          startDate: 'June 2023',
+          fee: '₹8000/year',
+          imgSrc: 'assets/images/mca.jpg'
+        },
+        {
+          title: 'PGCET - MBA Entrance',
+          description: 'Comprehensive MBA entrance coaching',
+          level: 'Entrance',
+          duration: '1 Year',
+          startDate: 'June 2023',
+          fee: '₹7000/year',
+          imgSrc: 'assets/images/mba.jpg'
+        }
+      ]
+    },
+    {
+      type: 'Language Courses',
+      courses: [
+        {
+          title: 'Kannada/Sanskrit',
+          description: 'Language courses for PUC & Degree',
+          level: 'Language',
+          duration: 'Termwise',
+          startDate: 'June/Dec Batches',
+          fee: '₹5000',
+          imgSrc: 'assets/images/languages.jpg'
+        }
+      ]
     }
-];
+  ];
 }

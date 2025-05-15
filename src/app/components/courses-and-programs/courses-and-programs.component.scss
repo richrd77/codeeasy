@@ -3,6 +3,11 @@ $primary-color: #FF6D00;        // Vibrant orange
 $primary-dark: #E65100;         // Darker orange
 $primary-light: #FF9E40;        // Lighter orange
 $secondary-color: #FFD180;      // Complementary light orange
+$school-color: #4CAF50;         // Green for school courses
+$coding-color: #2196F3;         // Blue for coding courses
+$puc-color: #9C27B0;            // Purple for PUC courses
+$entrance-color: #FF9800;       // Amber for entrance courses
+$language-color: #3F51B5;       // Indigo for language courses
 $bg-dark: #121212;              // Dark background
 $bg-card: #1E1E1E;              // Card background
 $text-primary: #FFFFFF;         // White text
@@ -71,12 +76,20 @@ $shadow-color: rgba(0, 0, 0, 0.3);
       border-bottom: 2px solid $border-color;
       display: inline-block;
     }
+
+    .section-info {
+      background: rgba($primary-color, 0.1);
+      padding: 10px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
   }
 
   /* Course Cards */
   .courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
   }
 
@@ -113,20 +126,30 @@ $shadow-color: rgba(0, 0, 0, 0.3);
         font-size: 0.8rem;
         font-weight: 600;
 
-        &.beginner {
-          background: rgba($primary-color, 0.2);
-          color: $secondary-color;
-          border: 1px solid $primary-light;
+        &.school {
+          background: rgba($school-color, 0.2);
+          color: lighten($school-color, 20%);
+          border: 1px solid $school-color;
         }
-        &.intermediate {
-          background: rgba($primary-dark, 0.2);
-          color: $primary-light;
-          border: 1px solid $primary-dark;
+        &.coding {
+          background: rgba($coding-color, 0.2);
+          color: lighten($coding-color, 20%);
+          border: 1px solid $coding-color;
         }
-        &.advanced {
-          background: rgba($primary-dark, 0.3);
-          color: $primary-color;
-          border: 1px solid $primary-color;
+        &.puc {
+          background: rgba($puc-color, 0.2);
+          color: lighten($puc-color, 20%);
+          border: 1px solid $puc-color;
+        }
+        &.entrance {
+          background: rgba($entrance-color, 0.2);
+          color: lighten($entrance-color, 20%);
+          border: 1px solid $entrance-color;
+        }
+        &.language {
+          background: rgba($language-color, 0.2);
+          color: lighten($language-color, 20%);
+          border: 1px solid $language-color;
         }
       }
     }
@@ -179,78 +202,6 @@ $shadow-color: rgba(0, 0, 0, 0.3);
       &:hover {
         background: $primary-dark;
         box-shadow: 0 0 15px rgba($primary-color, 0.4);
-      }
-    }
-  }
-
-  /* Programs Section */
-  .programs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-
-    .program-card {
-      background: $bg-card;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 5px $shadow-color;
-      border: 1px solid $border-color;
-      transition: all 0.3s;
-
-      &:hover {
-        transform: translateY(-3px);
-        border-color: $primary-light;
-      }
-
-      h3 {
-        color: $primary-light;
-        margin-top: 0;
-        font-size: 1.3rem;
-      }
-
-      ul {
-        padding-left: 20px;
-
-        li {
-          margin: 8px 0;
-          position: relative;
-
-          &::before {
-            content: '→';
-            color: $primary-light;
-            position: absolute;
-            left: -15px;
-          }
-        }
-      }
-    }
-  }
-
-  /* Benefits Section */
-  .benefits {
-    background: $bg-card;
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid $border-color;
-
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-
-      li {
-        position: relative;
-        padding-left: 30px;
-        margin: 15px 0;
-        font-size: 1.1rem;
-
-        &::before {
-          content: '✓';
-          color: $success-color;
-          position: absolute;
-          left: 0;
-          font-weight: bold;
-          font-size: 1.2rem;
-        }
       }
     }
   }
@@ -314,36 +265,8 @@ $shadow-color: rgba(0, 0, 0, 0.3);
             color: $text-primary;
           }
         }
-
-        &.tertiary {
-          background: $bg-dark;
-          color: $primary-light;
-          border: 2px solid $primary-color;
-
-          &:hover {
-            background: rgba($primary-color, 0.1);
-          }
-        }
       }
     }
-  }
-
-  /* Scrollbar Styling */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: $bg-card;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: $primary-color;
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: $primary-dark;
   }
 
   /* Responsive Adjustments */
@@ -356,7 +279,7 @@ $shadow-color: rgba(0, 0, 0, 0.3);
       }
     }
 
-    .courses-grid, .programs-grid {
+    .courses-grid {
       grid-template-columns: 1fr;
     }
 

@@ -26,7 +26,8 @@ import { CoursesAndProgramsComponent } from './components/courses-and-programs/c
     AppRoutingModule,
     RouterOutlet,
     CommonModule,
-    NgFor
+    NgFor,
+    RouterLink
   ],
   providers: [],
   bootstrap: [AppComponent]

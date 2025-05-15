@@ -1,117 +1,170 @@
 <div class="courses-container">
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Unlock Your Coding Potential with Industry-Ready Courses</h1>
-    <p class="subtitle">At CodeEasy, we offer expertly crafted courses and hands-on programs tailored to meet the
-      demands of today's tech-driven world.</p>
+    <h1>Quality Education for All Levels</h1>
+    <p class="subtitle">From school tuition to professional courses, we offer comprehensive learning programs at affordable prices.</p>
   </section>
 
-  <!-- Courses Section -->
+  <!-- School Tuition Section -->
   <section class="section">
-    <h2>🎓 Our Courses</h2>
-
-    <div class="level-section">
-      <h3>🧱 Beginner Level</h3>
-      <div class="courses-grid">
-        <div class="course-card" *ngFor="let course of courses">
-          <div class="course-header">
-            <h4>{{ course.title }}</h4>
-            <span class="level-badge beginner">{{ course.level }}</span>
-          </div>
-          <div class="course-body">
-            <p><strong>Duration:</strong> {{ course.duration }}</p>
-            <div *ngIf="course.languages">
-              <strong>Languages:</strong> {{ course.languages.join(', ') }}
-            </div>
-            <div *ngIf="course.technologies">
-              <strong>Technologies:</strong> {{ course.technologies.join(', ') }}
-            </div>
-            <div class="key-topics">
-              <strong>Key Topics:</strong>
-              <ul>
-                <li *ngFor="let topic of course.keyTopics">{{ topic }}</li>
-              </ul>
-            </div>
-            <p><strong>Ideal For:</strong> {{ course.idealFor }}</p>
-          </div>
-          <button class="enroll-btn">Enroll Now</button>
+    <h2>School Tuition (1st to 8th Standard)</h2>
+    <p class="section-info">Registration fee: ₹500 (one-time)</p>
+    
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let course of primaryCourses">
+        <div class="course-header">
+          <h4>{{ course.title }}</h4>
+          <span class="level-badge school">{{ course.level }}</span>
         </div>
-      </div>
-    </div>
-
-    <div class="level-section">
-      <h3>⚙️ Intermediate Level</h3>
-      <div class="courses-grid">
-        <div class="course-card" *ngFor="let course of courses">
-          <div class="courses-grid">
-            <div class="course-card" *ngFor="let course of courses">
-              <div class="course-header">
-                <h4>{{ course.title }}</h4>
-                <span class="level-badge beginner">{{ course.level }}</span>
-              </div>
-              <div class="course-body">
-                <p><strong>Duration:</strong> {{ course.duration }}</p>
-                <div *ngIf="course.languages">
-                  <strong>Languages:</strong> {{ course.languages.join(', ') }}
-                </div>
-                <div *ngIf="course.technologies">
-                  <strong>Technologies:</strong> {{ course.technologies.join(', ') }}
-                </div>
-                <div class="key-topics">
-                  <strong>Key Topics:</strong>
-                  <ul>
-                    <li *ngFor="let topic of course.keyTopics">{{ topic }}</li>
-                  </ul>
-                </div>
-                <p><strong>Ideal For:</strong> {{ course.idealFor }}</p>
-              </div>
-              <button class="enroll-btn">Enroll Now</button>
-            </div>
+        <div class="course-body">
+          <p><strong>Price:</strong> {{ course.price }}</p>
+          <p><strong>Duration:</strong> {{ course.duration }}</p>
+          <div class="key-topics">
+            <strong>Includes:</strong>
+            <ul>
+              <li *ngFor="let item of course.includes">{{ item }}</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="level-section">
-      <h3>🚀 Advanced Level</h3>
-      <div class="courses-grid">
-        <div class="course-card" *ngFor="let course of courses">
-          <!-- Same card structure as above -->
-        </div>
+        <button class="enroll-btn">Enroll Now</button>
       </div>
     </div>
   </section>
 
-  <!-- Programs Section -->
+  <!-- 9th-10th Section -->
   <section class="section">
-    <h2>💼 Special Programs</h2>
-    <div class="programs-grid">
-      <div class="program-card" *ngFor="let program of programs">
-        <h3>{{ program.title }}</h3>
-        <ul>
-          <li *ngFor="let feature of program.features">{{ feature }}</li>
-        </ul>
+    <h2>9th & 10th Standard Tuition</h2>
+    
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let course of secondaryCourses">
+        <div class="course-header">
+          <h4>{{ course.title }}</h4>
+          <span class="level-badge school">{{ course.level }}</span>
+        </div>
+        <div class="course-body">
+          <p><strong>Price:</strong> {{ course.price }}</p>
+          <p><strong>Duration:</strong> {{ course.duration }}</p>
+          <div class="key-topics">
+            <strong>Includes:</strong>
+            <ul>
+              <li *ngFor="let item of course.includes">{{ item }}</li>
+            </ul>
+          </div>
+          <p *ngIf="course.idealFor"><strong>Ideal For:</strong> {{ course.idealFor }}</p>
+        </div>
+        <button class="enroll-btn">Enroll Now</button>
       </div>
     </div>
   </section>
 
-  <!-- Benefits Section -->
-  <section class="section benefits">
-    <h2>📜 Certifications & Outcomes</h2>
-    <p>All our programs come with:</p>
-    <ul>
-      <li *ngFor="let benefit of benefits">{{ benefit }}</li>
-    </ul>
+  <!-- Coding Courses Section -->
+  <section class="section">
+    <h2>Coding & Computer Courses</h2>
+    
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let course of codingCourses">
+        <div class="course-header">
+          <h4>{{ course.title }}</h4>
+          <span class="level-badge coding">{{ course.level }}</span>
+        </div>
+        <div class="course-body">
+          <p><strong>Price:</strong> {{ course.price }}</p>
+          <p><strong>Duration:</strong> {{ course.duration }}</p>
+          <div *ngIf="course.keyTopics" class="key-topics">
+            <strong>Key Topics:</strong>
+            <ul>
+              <li *ngFor="let topic of course.keyTopics">{{ topic }}</li>
+            </ul>
+          </div>
+          <p *ngIf="course.idealFor"><strong>Ideal For:</strong> {{ course.idealFor }}</p>
+        </div>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUC Section -->
+  <section class="section">
+    <h2>PUC (1st & 2nd Year) Coaching</h2>
+    
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let course of pucCourses">
+        <div class="course-header">
+          <h4>{{ course.title }}</h4>
+          <span class="level-badge puc">{{ course.level }}</span>
+        </div>
+        <div class="course-body">
+          <p><strong>Price:</strong> {{ course.price }}</p>
+          <p><strong>Duration:</strong> {{ course.duration }}</p>
+          <div class="key-topics">
+            <strong>Includes:</strong>
+            <ul>
+              <li *ngFor="let item of course.includes">{{ item }}</li>
+            </ul>
+          </div>
+        </div>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Entrance Exam Section -->
+  <section class="section">
+    <h2>Entrance Exam Coaching</h2>
+    
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let course of entranceCourses">
+        <div class="course-header">
+          <h4>{{ course.title }}</h4>
+          <span class="level-badge entrance">{{ course.level }}</span>
+        </div>
+        <div class="course-body">
+          <p><strong>Price:</strong> {{ course.price }}</p>
+          <p><strong>Duration:</strong> {{ course.duration }}</p>
+          <div class="key-topics">
+            <strong>Includes:</strong>
+            <ul>
+              <li *ngFor="let item of course.includes">{{ item }}</li>
+            </ul>
+          </div>
+        </div>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages Section -->
+  <section class="section">
+    <h2>Language Courses</h2>
+    
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let course of languageCourses">
+        <div class="course-header">
+          <h4>{{ course.title }}</h4>
+          <span class="level-badge language">{{ course.level }}</span>
+        </div>
+        <div class="course-body">
+          <p><strong>Price:</strong> {{ course.price }}</p>
+          <p><strong>Duration:</strong> {{ course.duration }}</p>
+          <div class="key-topics">
+            <strong>Includes:</strong>
+            <ul>
+              <li *ngFor="let item of course.includes">{{ item }}</li>
+            </ul>
+          </div>
+        </div>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
   </section>
 
   <!-- CTA Section -->
   <section class="cta">
-    <h2>📅 Enroll Now</h2>
-    <p>Explore your ideal course and join the league of successful coders with CodeEasy.</p>
+    <h2>Enroll Now</h2>
+    <p>Choose your course and start your learning journey with us today.</p>
     <div class="cta-buttons">
-      <button class="btn primary">View Upcoming Batches</button>
-      <button class="btn secondary">Request a Free Demo</button>
-      <button class="btn tertiary">Download Brochure</button>
+      <button class="btn primary">Contact Us</button>
+      <button class="btn secondary">Visit Center</button>
     </div>
   </section>
 </div>

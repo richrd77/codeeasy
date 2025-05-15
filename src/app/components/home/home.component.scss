@@ -185,106 +185,228 @@ $btn-gradient: linear-gradient(to right, #FF6666, #ff0000);
         }
     }
 
-    .our-courses-section {
-        text-align: center;
-        margin-top: 5em;
+    /* Our Courses Section - Redesigned Styles */
+    /* Orange Theme with SCSS Variables */
+    $primary-color: #FF6D00;
+    $primary-dark: #E65100;
+    $primary-light: #FF9E40;
+    $secondary-color: #FFD180;
+    $bg-dark: #121212;
+    $bg-card: #1E1E1E;
+    $text-primary: #FFFFFF;
+    $text-secondary: #B0B0B0;
+    $border-color: #333333;
+    $success-color: #4CAF50;
+    $shadow-color: rgba(0, 0, 0, 0.3);
 
-        h2 {
-            font-size: $h2-font-size;
-            margin: 0;
+    .our-courses-section {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: $bg-dark;
+        color: $text-secondary;
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+
+            h2 {
+                color: $text-primary;
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+
+            .section-subtitle {
+                font-size: 1.2rem;
+                color: $text-secondary;
+            }
         }
 
-        .our-courses-list {
-            display: flex;
-            flex-direction: column;
+        .courses-container {
+            .our-courses-list {
+                margin-bottom: 50px;
 
-            .courses {
-                display: grid;
-                align-items: center;
-                justify-content: flex-start;
-                padding: 1em min(3em, 10%);
-                gap: 1em;
-                grid-auto-flow: column;
-                grid-auto-columns: clamp(15vw, 20vw, 25vw);
-                overflow-x: auto;
-                scroll-behavior: smooth;
-                scrollbar-width: none;
+                .category-header {
+                    margin-bottom: 30px;
+                    position: relative;
 
-                .course {
-                    box-sizing: border-box;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: flex-start;
-                    padding: 1em;
-                    box-shadow: 0 0 5px 2px rgb(170, 170, 170);
-                    border-radius: 15px;
-                    height: 100%;
+                    h3 {
+                        color: $primary-light;
+                        font-size: 1.8rem;
+                        margin-bottom: 10px;
+                    }
 
-                    .title-container {
-                        width: 100%;
-                        border-top-right-radius: 15px;
-                        border-top-left-radius: 15px;
-                        display: flex;
-                        justify-content: center;
-                        background: #191919;
+                    .category-line {
+                        height: 3px;
+                        width: 100px;
+                        background: linear-gradient(90deg, $primary-color, transparent);
+                        border-radius: 3px;
+                    }
+                }
 
+                .courses-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                    gap: 25px;
 
+                    .course-card {
+                        background: $bg-card;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        border: 1px solid $border-color;
+                        transition: all 0.3s ease;
+                        position: relative;
 
-
-
-
-                        span {
-                            align-self: center;
-                            font-size: $p-font-size;
-                            text-align: center;
-                            font-weight: 1000;
-                            padding: 1em 0;
+                        &:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                            border-color: $primary-color;
                         }
-                    }
 
-
-                    p {
-                        font-size: $subp-font-size;
-                        text-align: center;
-                        margin: 0.4em 0;
-                    }
-
-                    .image-container {
-                        width: 60px;
-                        align-self: center;
-                        margin: 1em;
-
-                        img {
-                            max-width: 100%;
+                        .course-badge {
+                            position: absolute;
+                            top: 15px;
+                            right: 15px;
+                            background: rgba($primary-color, 0.9);
+                            color: white;
+                            padding: 5px 10px;
+                            border-radius: 20px;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                            z-index: 2;
                         }
-                    }
 
-                    .btn-container {
-                        display: flex;
-                        justify-self: flex-end;
-                        align-self: center;
+                        .course-image {
+                            height: 180px;
+                            overflow: hidden;
 
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                transition: transform 0.5s ease;
 
-                        button {
-                            background: linear-gradient(to right, #FF6666, #ff0000);
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            gap: 10px;
-                            font-size: $btn-font-size;
-                            padding: min(0.6em, 5%) min(8em, 4vw);
-                            border-radius: 30px;
-                            border: none;
+                                .course-card:hover & {
+                                    transform: scale(1.05);
+                                }
+                            }
+                        }
 
-                            &:hover {
-                                cursor: pointer;
-                                box-shadow: 0 0 10px 1px #3f3f3f;
+                        .course-content {
+                            padding: 20px;
+
+                            .course-title {
+                                color: $text-primary;
+                                font-size: 1.3rem;
+                                margin-bottom: 10px;
+                                min-height: 60px;
+                            }
+
+                            .course-desc {
+                                color: $text-secondary;
+                                margin-bottom: 15px;
+                                font-size: 0.95rem;
+                                min-height: 60px;
+                            }
+
+                            .course-meta {
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 15px;
+                                margin-bottom: 15px;
+
+                                .meta-item {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 5px;
+                                    font-size: 0.9rem;
+
+                                    img {
+                                        width: 16px;
+                                        height: 16px;
+                                        filter: brightness(0.8);
+                                    }
+                                }
+                            }
+                        }
+
+                        .course-footer {
+                            padding: 0 20px 20px;
+
+                            .enroll-btn {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 8px;
+                                width: 100%;
+                                padding: 12px;
+                                background: $primary-color;
+                                color: white;
                                 border: none;
+                                border-radius: 5px;
+                                font-weight: 600;
+                                cursor: pointer;
+                                transition: all 0.3s;
+
+                                &:hover {
+                                    background: $primary-dark;
+                                    box-shadow: 0 0 15px rgba($primary-color, 0.4);
+                                }
+
+                                svg {
+                                    transition: transform 0.3s;
+                                }
+
+                                &:hover svg {
+                                    transform: translateX(3px);
+                                }
                             }
                         }
                     }
                 }
+            }
+        }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .our-courses-section {
+            padding: 30px 15px;
+
+            .section-header {
+                h2 {
+                    font-size: 2rem;
+                }
+
+                .section-subtitle {
+                    font-size: 1rem;
+                }
+            }
+
+            .courses-container .our-courses-list {
+                .courses-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .our-courses-section {
+            padding: 3rem 1rem;
+
+            .courses-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .our-courses-section {
+            .courses-grid {
+                grid-template-columns: 1fr;
             }
         }
     }
@@ -342,6 +464,7 @@ $btn-gradient: linear-gradient(to right, #FF6666, #ff0000);
         }
     }
 }
+
 // Add to your existing variables if needed
 $h6-font-size: clamp(0.75rem, 1.5vw, 1rem);
 
@@ -379,7 +502,7 @@ $h6-font-size: clamp(0.75rem, 1.5vw, 1rem);
                     width: 60px;
                     height: 60px;
                     margin: 0 auto 1em;
-                    
+
                     img {
                         width: 100%;
                         height: 100%;
@@ -490,7 +613,8 @@ $h6-font-size: clamp(0.75rem, 1.5vw, 1rem);
                     }
                 }
 
-                p, li {
+                p,
+                li {
                     font-size: $h6-font-size;
                     margin-bottom: 0.8em;
                     display: flex;
@@ -581,7 +705,7 @@ $h6-font-size: clamp(0.75rem, 1.5vw, 1rem);
                 p {
                     text-align: left;
                     margin: 0.3em 0;
-                    
+
                     strong {
                         color: #ff9100;
                     }
@@ -608,7 +732,7 @@ $h6-font-size: clamp(0.75rem, 1.5vw, 1rem);
                 grid-template-columns: 1fr 1fr;
             }
         }
-        
+
         .testimonials {
             .testimonial-container {
                 grid-template-columns: 1fr;
@@ -624,7 +748,7 @@ $h6-font-size: clamp(0.75rem, 1.5vw, 1rem);
                 grid-template-columns: 1fr;
             }
         }
-        
+
         .site-footer {
             .footer-content {
                 grid-template-columns: 1fr;
