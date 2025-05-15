@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './common/footer/footer.component';
-import { AboutUsComponent } from './components/home/about-us/about-us.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 
 @NgModule({
@@ -15,6 +15,7 @@ import { AboutUsComponent } from './components/home/about-us/about-us.component'
     HeaderComponent,
     HomeComponent,
     FooterComponent,
+    AboutUsComponent
 
   ],
   imports: [
