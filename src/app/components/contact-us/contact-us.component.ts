@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './contact-us.component.scss'
 })
 export class ContactUsComponent {
-
+ 
   contactForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
