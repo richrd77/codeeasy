@@ -1,2 +1,2 @@
 # codeeasy
-website for [codeeasy.org.in](https://www.codeeasy.org.in)
+website for [codeeasy.org.in](https://codeeasy.org.in)
