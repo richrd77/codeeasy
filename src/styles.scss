@@ -1,3 +1,10 @@
 body{
     font-family: 'system-ui','sans' ;
+    margin: 0;
+    padding: 0;
+    background-color: black;
 }
+// colors
+$primary-color: #ffffff;  // White for primary elements
+$secondary-color: #bbbbbb; // Light gray for secondary elements
+$accent-color: #4d90fe;   // Bright blue for accents (adjust as needed)

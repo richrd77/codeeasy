@@ -1,0 +1,43 @@
+<header class="header-wrapper">
+    <div class="menu-bar-container">
+        <nav class="menu-bar">
+            <div class="logo">
+                <h1>CODEEASY</h1>
+            </div>
+            <ul>
+                <li><a routerLink="home">Home</a></li>
+                <li><a routerLink="courses-and-programs">Courses & Programs</a></li>
+                <li><a routerLink="reviews">Reviews</a></li>
+                <li><a routerLink="latest-news-and-resources">Latest News & Resources</a></li>
+                <li><a routerLink="contact-us">Contact Us</a></li>
+                <li><a routerLink="about-us">About Us</a></li>
+            </ul>
+            <div class="menu-icon" (click)="showSideBar()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </div>
+        </nav>
+    </div>
+
+    <div class="side-bar-container">
+        <nav class="side-bar">
+            <div class="menu-icon" (click)="hideSideBar()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#FFFFFF">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </div>
+            <ul>
+                <li><a routerLink="home">Home</a></li>
+                <li><a routerLink="courses-and-programs">Courses & Programs</a></li>
+                <li><a routerLink="reviews">Reviews</a></li>
+                <li><a routerLink="latest-news-and-resources">Latest News & Resources</a></li>
+                <li><a routerLink="contact-us">Contact Us</a></li>
+                <li><a routerLink="about-us">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
