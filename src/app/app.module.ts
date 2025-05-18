@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
-import { FooterComponent } from './common/footer/footer.component';
+import { FooterComponent } from './common/components/footer/footer.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { CommonModule, NgFor } from '@angular/common';
 import { CoursesAndProgramsComponent } from './components/courses-and-programs/courses-and-programs.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CoursesAndProgramsComponent } from './components/courses-and-programs/c
     HomeComponent,
     FooterComponent,
     AboutUsComponent,
-    CoursesAndProgramsComponent
+    CoursesAndProgramsComponent,
+    ReviewsComponent
 
   ],
   imports: [

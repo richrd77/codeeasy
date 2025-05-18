@@ -1,0 +1,39 @@
+<div class="courses-container">
+  <section class="hero">
+    <h1>Student Reviews</h1>
+    <p class="subtitle">Hear what our students say about their learning experience at CodeEasy</p>
+  </section>
+
+  <section class="section">
+    
+
+    <div class="courses-grid">
+      <div class="course-card" *ngFor="let review of reviews">
+        <div class="course-header">
+          <h4>{{ review.author }}</h4>
+          <span class="level-badge" [ngStyle]="{'background': 'rgba(' + getCourseTypeColor(review.courseType) + ', 0.2)',
+                                              'color': 'lighten(' + getCourseTypeColor(review.courseType) + ', 20%)',
+                                              'border': '1px solid ' + getCourseTypeColor(review.courseType)}">
+            {{ review.courseType }}
+          </span>
+        </div>
+        <div class="course-body">
+
+          <p>{{ review.content }}</p>
+          <div class="key-topics">
+            <strong>Date:</strong> {{ review.date | date }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to share your experience?</h2>
+    <p>Help others discover the value of CodeEasy by leaving your review</p>
+    <div class="cta-buttons">
+      <button class="btn primary">Write a Review</button>
+      <button class="btn secondary">Browse Courses</button>
+    </div>
+  </section>
+</div>
